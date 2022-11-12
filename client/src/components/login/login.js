@@ -12,7 +12,10 @@ const Login = () => {
   const navigate = useNavigate();
 
   const generateError = (error) =>
-    toast.error(error, { position: "bottom-right", theme: "dark" });
+    toast.error(error, {
+      position: "top-right",
+      theme: "dark",
+    });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,7 +32,12 @@ const Login = () => {
           if (email) generateError(email);
           else if (password) generateError(password);
         } else {
-          navigate("/");
+          navigate("/energymgr");
+          window.location.href = "/energymgr";
+          toast.success("Login Successful", {
+            position: "top-right",
+            theme: "dark",
+          });
         }
       }
     } catch (error) {
@@ -64,7 +72,7 @@ const Login = () => {
         </div>
         <button type="submit">Submit</button>
         <span>
-          Don't have an account? <Link to="/register">Register</Link>
+          Don't have an account? <Link to="/">Register</Link>
         </span>
       </form>
       <ToastContainer />

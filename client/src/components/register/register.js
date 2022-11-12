@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/register",
+        "http://localhost:5000/",
         { ...values },
         { withCredentials: true }
       );
@@ -31,7 +31,12 @@ const Register = () => {
           if (email) generateError(email);
           else if (password) generateError(password);
         } else {
-          navigate("/");
+          navigate("/energymgr");
+          window.location.href = "/energymgr";
+          toast.success("Registration Successful", {
+            position: "top-right",
+            theme: "dark",
+          });
         }
       }
     } catch (error) {
@@ -41,10 +46,10 @@ const Register = () => {
 
   return (
     <div className="main_container">
-      <div className="container0">
+      <div className="heading_container">
         <h3>Watt Analyzer</h3>
       </div>
-      <div className="container1">
+      <div className="form_container">
         <h2>Create an account</h2>
         <form onSubmit={(e) => handleSubmit(e)}>
           <div>
@@ -74,11 +79,11 @@ const Register = () => {
             Already have an account? <Link to="/login">Login</Link>
           </span>
         </form>
-        <ToastContainer />
       </div>
-      <div className="container2">
+      <div className="globe_container">
         <img alt="earth" className="save_earth" src={Earth} width="200px" />
       </div>
+      <ToastContainer />
     </div>
   );
 };
