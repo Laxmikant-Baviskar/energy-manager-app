@@ -16,12 +16,29 @@ body {
   overflow: hidden;
 }
 
-.container {
+.login_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login_main_container {
+  display: flex;
+  align-items: center;
+  flex: row;
+  position: absolute;
+  left: 44%;
+  top: 38%;
+}
+
+.login_container {
   background-color: white;
   padding: 1rem 3rem;
   padding-bottom: 2rem;
-  border-radius: 0.5rem;
-  border-top: rgb(43, 217, 0) 0.5rem solid;
+  border-top: rgb(41, 189, 3) 0.5rem solid;
+  box-shadow: 1px 1px 1px rgb(128, 128, 128);
+  border-radius: 0.3rem;
+  border: 1px solid black;
 }
 
 h2 {
@@ -92,4 +109,97 @@ nav button {
 nav button:hover {
   background-color: white;
   color: black;
+}
+
+.earth_container_login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.earth_container_login img {
+  animation: spin 7s linear infinite;
+  width: 190px;
+}
+
+.earth_container_login p {
+  cursor: pointer;
+  color: rgba(0, 255, 166, 0.874);
+}
+
+.earth_container_login p:hover {
+  font-size: 20px;
+}
+
+.earth_container_login_animation {
+  position: absolute;
+  top: 50%;
+  left: 22%;
+  transform: translate(-475%, -290%);
+  transition: 1.3s all ease;
+}
+
+.earth_container_login_animation img {
+  width: 150px;
+  animation: spin 7s linear infinite;
+}
+
+.login_container_animation {
+  background-color: white;
+  padding: 1rem 3rem;
+  padding-bottom: 2rem;
+  border-top: rgb(41, 189, 3) 0.5rem solid;
+  box-shadow: 1px 1px 1px rgb(128, 128, 128);
+  border-radius: 0.3rem;
+  transform: translate(150%, 0%);
+  animation: linear;
+  transition: 1.3s all ease;
+}
+
+.login_heading h3 {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  font-size: 100px;
+  font-family: "Montez", sans-serif;
+  font-style: normal;
+  color: rgba(8, 191, 127, 0.874);
+  font-weight: 500;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.login_heading h3::before {
+  margin-top: 25px;
+  font-size: 21px;
+  text-align: center;
+  animation: fadein 10s;
+}
+
+.birds_login_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 100vh;
+  background-image: url("../../assets/wallpaperflare.com_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
 }
