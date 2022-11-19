@@ -37,8 +37,9 @@ const handleErrors = (error) => {
 
 module.exports.register = async (req, res, next) => {
   try {
-    const { email, password } = req.body;
+    const { username, email, password } = req.body;
     const user = await UserModel.create({
+      username,
       email,
       password,
     });

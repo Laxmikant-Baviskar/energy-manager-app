@@ -7,6 +7,7 @@ import Earth from "../../assets/earth.png";
 
 const Register = () => {
   const [values, setValues] = useState({
+    username: "",
     email: "",
     password: "",
   });
@@ -26,9 +27,10 @@ const Register = () => {
       );
       if (data) {
         if (data.errors) {
-          const { email, password } = data.errors;
+          const { username, email, password } = data.errors;
 
-          if (email) generateError(email);
+          if (username) generateError(username);
+          else if (email) generateError(email);
           else if (password) generateError(password);
         } else {
           navigate("/energymgr");
@@ -40,7 +42,7 @@ const Register = () => {
         }
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -52,6 +54,17 @@ const Register = () => {
       <div className="form_container">
         <h2>Create an account</h2>
         <form onSubmit={(e) => handleSubmit(e)}>
+          <div>
+            <label htmlFor="username">Username</label>
+            <input
+              type="username"
+              name="username"
+              placeholder="Username"
+              onChange={(e) =>
+                setValues({ ...values, [e.target.name]: e.target.value })
+              }
+            />
+          </div>
           <div>
             <label htmlFor="email">Email</label>
             <input

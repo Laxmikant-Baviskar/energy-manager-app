@@ -51,12 +51,6 @@ const Login = () => {
     <div className="birds_login_container">
       {!centerEarth && <Birds />}
       <div className="login_box">
-        {!centerEarth && (
-          <div className={!centerEarth ? "login_heading" : ""}>
-            <h3>Watt Analyzer</h3>
-          </div>
-        )}
-
         <div className="login_main_container">
           <div
             className={
@@ -107,11 +101,11 @@ const Login = () => {
                   Don't have an account? <Link to="/">Register</Link>
                 </span>
               </form>
-              <ToastContainer />
             </div>
           )}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
