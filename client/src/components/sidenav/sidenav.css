@@ -1,0 +1,37 @@
+.wa_sidenav {
+  background-color: rgb(69, 69, 69);
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wa_sidenav .hamburger {
+  width: 100%;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 10%;
+}
+
+.no_nav {
+  width: 2.5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgb(7, 237, 118);
+  height: 100vh;
+}
+
+.no_nav img {
+  width: 87%;
+  padding: 0.3rem;
+  margin-top: 7%;
+  cursor: pointer;
+}

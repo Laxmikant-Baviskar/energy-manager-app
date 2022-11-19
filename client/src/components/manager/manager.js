@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Tips from "../../components/data/tips.json";
+import "./manager.css";
+import SideNav from "../sidenav/sidenav";
+import Graph from "../../assets/graph.png";
 
 const Manager = () => {
   const [user, setUser] = useState(false);
@@ -38,10 +41,23 @@ const Manager = () => {
 
   return (
     user && (
-      <>
+      <div className="app_container">
         <ToastContainer />
-        <div>Hello</div>
-      </>
+        <SideNav />
+        <div className="wa_container">
+          <div className="wa_heading_container">
+            <img src={Graph} />
+            <div className="wa_heading">
+              <h3>Energy Consumption Analyzer</h3>
+              <p>
+                Analyze your energy consumption and get your estimated
+                electricity charge.
+              </p>
+            </div>
+          </div>
+          <div className="wa_content">Vedant</div>
+        </div>
+      </div>
     )
   );
 };
