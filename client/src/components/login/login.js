@@ -6,7 +6,7 @@ import "./login.css";
 import Earth from "../../assets/login_earth.png";
 import Birds from "../birds/birds";
 
-const Login = () => {
+const Login = ({ userEmail, setUserEmail }) => {
   const [centerEarth, setCenterEarth] = useState(true);
   const [values, setValues] = useState({
     email: "",
@@ -28,6 +28,8 @@ const Login = () => {
         { ...values },
         { withCredentials: true }
       );
+
+      setUserEmail(values.email);
       if (data) {
         if (data.errors) {
           const { email, password } = data.errors;

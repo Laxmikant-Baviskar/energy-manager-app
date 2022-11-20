@@ -8,6 +8,7 @@ import Graph from "../../assets/graph.png";
 const Manager = () => {
   const [user, setUser] = useState(false);
   const [tipCnt, setTipCnt] = useState(0);
+  const [showTips, setShowTips] = useState(false);
 
   const generateInfo = () => {
     const tip = Tips[Math.floor(Math.random() * 23) + 1];
@@ -18,12 +19,12 @@ const Manager = () => {
       });
 
       setTipCnt(tipCnt + 1);
-    }, 30000);
+    }, 60000);
   };
 
   useEffect(() => {
-    generateInfo();
-  }, [tipCnt]);
+    if (showTips && user) generateInfo();
+  }, [tipCnt, showTips]);
 
   useEffect(() => {
     let cookieExist = document.cookie.match(
@@ -43,7 +44,7 @@ const Manager = () => {
     user && (
       <div className="app_container">
         <ToastContainer />
-        <SideNav />
+        <SideNav showTips={showTips} setShowTips={setShowTips} />
         <div className="wa_container">
           <div className="wa_heading_container">
             <img src={Graph} />
