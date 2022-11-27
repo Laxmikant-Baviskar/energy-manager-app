@@ -9,15 +9,15 @@
 }
 
 .wa_sidenav .hamburger {
-  width: 100%;
   padding: 0.6rem;
   display: flex;
   justify-content: flex-end;
   cursor: pointer;
+  margin-left: 84%;
 }
 
 .hamburger img {
-  width: 10%;
+  width: 23px;
 }
 
 .no_nav {
@@ -30,9 +30,11 @@
 }
 
 .no_nav img {
-  width: 87%;
+  width: 32px;
   padding: 0.3rem;
   margin: 10%;
+  margin-left: 17%;
+  margin-top: 17%;
   cursor: pointer;
 }
 
@@ -53,6 +55,7 @@
   column-gap: 14%;
   width: 90%;
   margin-left: 10%;
+  flex-wrap: wrap;
 }
 
 .tips_toggle p {
@@ -64,7 +67,7 @@
 }
 
 .tips_toggle img {
-  width: 11%;
+  width: 24px;
 }
 
 .wa_sidenav .sign_out {
@@ -130,8 +133,8 @@
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .slider:before {
@@ -143,8 +146,8 @@
   left: 1px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 input:checked + .slider {

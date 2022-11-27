@@ -12,7 +12,7 @@ const App = () => {
   useLayoutEffect(() => {
     WebFont.load({
       google: {
-        families: ["Dosis", "Nunito", "Montez", "PT Sans"],
+        families: ["Dosis", "Nunito", "Montez", "PT Sans", "Roboto"],
       },
     });
   });

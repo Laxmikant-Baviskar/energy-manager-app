@@ -24,7 +24,7 @@ const SideNav = ({ showTips, setShowTips }) => {
   };
 
   return isSideNavOpen ? (
-    <div className="wa_sidenav">
+    <div loading="lazy" className="wa_sidenav">
       <div className="hamburger" onClick={handleSideNav}>
         <img src={Menu} />
       </div>
@@ -37,19 +37,24 @@ const SideNav = ({ showTips, setShowTips }) => {
           <img src={Bulb} />
           <p>Show Energy Tips</p>
           <label className="switch">
-            <input onChange={handleTips} type="checkbox" />
-            <span className="slider round"></span>
+            {showTips ? (
+              <input type="checkbox" checked={showTips} />
+            ) : (
+              <input type="checkbox" checked={showTips} />
+            )}
+
+            <span onClick={handleTips} className="slider round"></span>
           </label>
         </div>
       </div>
       <div onClick={handleSignOut} className="sign_out">
-        <img color="white" src={SignOut} />
+        <img src={SignOut} />
         <p>Sign out</p>
       </div>
     </div>
   ) : (
     <>
-      <div className="no_nav" onClick={handleSideNav}>
+      <div loading="lazy" className="no_nav" onClick={handleSideNav}>
         <img color="white" src={Menu} />
       </div>
     </>

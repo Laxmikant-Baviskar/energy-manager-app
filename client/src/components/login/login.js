@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import "./login.css";
 import Earth from "../../assets/login_earth.png";
-import Birds from "../birds/birds";
 
 const Login = ({ userEmail, setUserEmail }) => {
   const [centerEarth, setCenterEarth] = useState(true);
@@ -51,7 +50,6 @@ const Login = ({ userEmail, setUserEmail }) => {
   };
   return (
     <div className="birds_login_container">
-      {!centerEarth && <Birds />}
       <div className="login_box">
         <div className="login_main_container">
           <div

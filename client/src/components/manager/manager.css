@@ -23,7 +23,7 @@
 }
 
 .wa_heading_container img {
-  width: 5%;
+  width: 70px;
 }
 
 .wa_heading_container .wa_heading {
@@ -40,9 +40,4 @@
 .wa_heading p {
   font-size: 15.7px;
   font-family: "PT Sans";
-}
-
-.wa_container .wa_content {
-  width: 97%;
-  height: 100%;
 }

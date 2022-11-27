@@ -4,6 +4,7 @@ import Tips from "../../components/data/tips.json";
 import "./manager.css";
 import SideNav from "../sidenav/sidenav";
 import Graph from "../../assets/graph.png";
+import House from "../house/house";
 
 const Manager = () => {
   const [user, setUser] = useState(false);
@@ -19,7 +20,7 @@ const Manager = () => {
       });
 
       setTipCnt(tipCnt + 1);
-    }, 60000);
+    }, 6000);
   };
 
   useEffect(() => {
@@ -56,7 +57,7 @@ const Manager = () => {
               </p>
             </div>
           </div>
-          <div className="wa_content">Vedant</div>
+          <House />
         </div>
       </div>
     )
