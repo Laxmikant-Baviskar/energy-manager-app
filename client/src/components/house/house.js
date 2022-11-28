@@ -11,7 +11,7 @@ import Bedroom from "../../assets/rooms/Bedroom.png";
 import Kitchen from "../../assets/rooms/Kitchen.png";
 
 const House = () => {
-  const [selectHouse, setSelectHouse] = useState(false); //false
+  const [selectHouse, setSelectHouse] = useState(false);
   const [houseType, setHouseType] = useState("");
   const [menu, setMenu] = useState(true);
   const [rooms, setRooms] = useState(false);
@@ -21,6 +21,8 @@ const House = () => {
     Bedroom: 0,
     Kitchen: 0,
   });
+  const [appliances, setAppliances] = useState(false);
+  const [roomsArray, setRoomsArray] = useState([]);
 
   const handleMenu = () => {
     setMenu(false);
@@ -45,6 +47,7 @@ const House = () => {
 
   const back = () => {
     closeHouseSelection();
+    setMenu(true);
   };
 
   const handleLivingRoomCnt = (payload) => {
@@ -82,6 +85,31 @@ const House = () => {
     else if (name === "Bathroom") handleBathroomCnt(payload);
     else if (name === "Bedroom") handleBedroomCnt(payload);
     else handleKitchenCnt(payload);
+  };
+
+  const handleAppliancesSection = () => {
+    setAppliances(true);
+    createRoomsMap();
+  };
+
+  const createRoomsMap = () => {
+    const livingRoomCnt = roomsCnt.LivingRoom;
+    const bedRoomCnt = roomsCnt.Bedroom;
+    const bathRoomCnt = roomsCnt.Bathroom;
+    const kitchenCnt = roomsCnt.Kitchen;
+
+    for (let i = 0; i < livingRoomCnt; ++i) {
+      roomsArray.push(`LIVINGROOM ${i + 1}`);
+    }
+    for (let i = 0; i < bedRoomCnt; ++i) {
+      roomsArray.push(`BEDROOM ${i + 1}`);
+    }
+    for (let i = 0; i < bathRoomCnt; ++i) {
+      roomsArray.push(`BATHROOM ${i + 1}`);
+    }
+    for (let i = 0; i < kitchenCnt; ++i) {
+      roomsArray.push(`KITCHEN ${i + 1}`);
+    }
   };
 
   return (
@@ -127,7 +155,7 @@ const House = () => {
             />
           </div>
         </div>
-      ) : (
+      ) : !appliances ? (
         <div className={styles.roomsMainContainer}>
           <span onClick={backToSelectedHouse}>BACK</span>
           <div className={styles.roomsContainer}>
@@ -160,6 +188,68 @@ const House = () => {
                   )}
 
                   <button onClick={() => handleRoomsCnt(val.name, 1)}>+</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.addSelection}>
+            <button onClick={handleAppliancesSection}>ADD SELECTION</button>
+          </div>
+        </div>
+      ) : (
+        <div className={styles.applianceContainer}>
+          <h3>ADD APPLIANCES INFO</h3>
+          <div>
+            {roomsArray.map((val, key) => (
+              <div className={styles.roomsMap} key={key}>
+                <h4>{val}</h4>
+                <div className={styles.singleRoom}>
+                  <img
+                    src={
+                      val.includes("LIVING")
+                        ? LivingRoom
+                        : val.includes("BED")
+                        ? Bedroom
+                        : val.includes("KITCHEN")
+                        ? Kitchen
+                        : Bathroom
+                    }
+                  />
+                  <div>
+                    <table>
+                      <tr>
+                        <th>APPLIANCES</th>
+                        <th>NUMBER OF APPLIANCE</th>
+                        <th>USAGE PER DAY(HOURS)</th>
+                        <th>NUMBER OF DAYS USED PER MONTH</th>
+                        <th>WATTS</th>
+                      </tr>
+                      <tr>
+                        <th>FAN</th>
+                        <th>
+                          <input type="number" min="0" />
+                        </th>
+                        <th>
+                          <input type="number" min="0" />
+                        </th>
+                        <th>
+                          <input type="number" min="0" />
+                        </th>
+                        <th>
+                          <input type="number" min="0" />
+                        </th>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div className={styles.addBtn}>
+                  <button>ADD APPLIANCE</button>
+                  <select id="appliances">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                  </select>
                 </div>
               </div>
             ))}

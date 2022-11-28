@@ -4,8 +4,9 @@
 
 .houseContainer {
   width: 97%;
-  height: 100vh;
+  height: 100%;
   padding: 2rem;
+  overflow: scroll;
 }
 
 .houseAdd {
@@ -107,23 +108,19 @@
 .roomAdder {
   display: flex;
   flex-direction: column;
-  align-items: center;
   row-gap: 40px;
-  margin-left: 1%;
+  justify-content: center;
 }
 
 .roomAdder h4 {
   font-family: "Dosis";
-  font-size: 16px;
-  position: absolute;
-  left: 8%;
+  font-size: 17px;
 }
 
 .roomAdder button {
-  position: absolute;
-  left: 8%;
-  top: 33%;
   background-color: rgb(12, 186, 171);
+  width: 80%;
+  align-self: center;
 }
 
 .roomAdder button:hover {
@@ -139,24 +136,24 @@
   box-shadow: gray 0.7px 0.7px;
   border-left: 10px solid rgb(12, 186, 171);
   font-family: "Dosis";
-  width: 75%;
+  width: 90%;
   padding: 2.2rem;
-}
-
-.roomsMainContainer span {
-  position: absolute;
-  left: 7.3%;
-  top: 21.4%;
-  font-weight: 600;
-  cursor: pointer;
 }
 
 .roomsContainer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  column-gap: 62px;
   margin-top: 2%;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.roomsMainContainer span {
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: -2%;
+  margin-left: -2%;
 }
 
 .roomsContainer div {
@@ -195,4 +192,116 @@
   background-color: white;
   border: 1px solid rgb(12, 186, 171);
   color: rgb(12, 186, 171);
+}
+
+.addSelection {
+  width: max-content;
+  margin-left: 89.3%;
+  margin-top: 3%;
+}
+
+.addSelection button {
+  background-color: rgb(12, 186, 171);
+  border: 1px thin rgb(12, 186, 171);
+}
+
+.addSelection button:hover {
+  background-color: white;
+  border: 1px solid rgb(12, 186, 171);
+  color: rgb(12, 186, 171);
+}
+
+.applianceContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-family: "PT Sans";
+  width: max-content;
+}
+
+.applianceContainer h3 {
+  font-size: 20px;
+  width: max-content;
+  margin-bottom: 2%;
+  font-weight: 560;
+}
+
+.roomsMap {
+  border: 1px solid rgb(1, 216, 199);
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin-bottom: 2%;
+}
+
+.roomsMap h4 {
+  font-size: 15px;
+  background-color: rgb(24, 215, 199);
+  padding: 0.5rem;
+  font-weight: 550;
+}
+
+.singleRoom {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  column-gap: 5%;
+}
+
+.singleRoom img {
+  width: 150px;
+  height: fit-content;
+}
+
+.singleRoom div table {
+  font-size: 16px;
+  font-weight: 200;
+  border: -0.5px solid rgb(186, 186, 186);
+}
+
+.singleRoom div table :nth-child(odd) {
+  font-weight: 600;
+  background-color: rgb(193, 193, 193);
+  padding: 0.5rem 0.5rem;
+  height: 100%;
+}
+
+.singleRoom div table :nth-child(even) {
+  font-weight: 600;
+  background-color: rgb(147, 147, 147);
+  padding: 0.5rem 0.5rem;
+}
+
+.singleRoom input {
+  width: max-content;
+  height: 30px;
+}
+
+.addBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0.4rem;
+  align-items: center;
+  gap: 2%;
+  margin-right: 0.8%;
+}
+
+.addBtn button {
+  background-color: rgb(12, 186, 171);
+  border: 1px solid rgb(12, 186, 171);
+  color: white;
+}
+
+.addBtn button:hover {
+  background-color: white;
+  border: 1px solid rgb(12, 186, 171);
+  color: rgb(12, 186, 171);
+}
+
+.addBtn select {
+  width: 100px;
+  height: 30px;
+  border-radius: 2px;
+  padding: 0.3rem;
 }
