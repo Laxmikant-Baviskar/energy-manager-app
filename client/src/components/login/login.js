@@ -40,7 +40,7 @@ const Login = ({ userEmail, setUserEmail }) => {
           // window.location.href = "/energymgr";
           window.open(
             "https://vedantyetekar7.github.io/energy-manager-app/",
-            "target:_blank"
+            "_self"
           );
           toast.success("Login Successful", {
             position: "top-right",

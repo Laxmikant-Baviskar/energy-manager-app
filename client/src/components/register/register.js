@@ -37,7 +37,7 @@ const Register = () => {
           // window.location.href = "/energymgr";
           window.open(
             "https://vedantyetekar7.github.io/energy-manager-app/",
-            "target:_blank"
+            "_self"
           );
           toast.success("Registration Successful", {
             position: "top-right",
