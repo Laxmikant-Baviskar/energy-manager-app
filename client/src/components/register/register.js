@@ -36,7 +36,7 @@ const Register = () => {
           // navigate("/energymgr");
           // window.location.href = "/energymgr";
           window.open(
-            "https://support.wwf.org.uk/earth_hour/index.php?type=individual",
+            "https://vedantyetekar7.github.io/energy-manager-app/",
             "target:_blank"
           );
           toast.success("Registration Successful", {

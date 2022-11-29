@@ -38,6 +38,10 @@ const Login = ({ userEmail, setUserEmail }) => {
         } else {
           // navigate("/energymgr");
           // window.location.href = "/energymgr";
+          window.open(
+            "https://vedantyetekar7.github.io/energy-manager-app/",
+            "target:_blank"
+          );
           toast.success("Login Successful", {
             position: "top-right",
             theme: "dark",
