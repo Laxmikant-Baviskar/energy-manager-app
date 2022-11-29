@@ -1,0 +1,16 @@
+                            Electro version 1 
+                                License 
+
+Electro is a tool for estimating the elctricity consumption of your home which calculates the total electricity consumption of your home and the electricity consumption of each appliance.
+
+What you can do with this software:
+ 1. You can use this software for personal use.
+ 2. You can use this software for commercial use.
+ 3. You can modify the software to suit your needs.
+ 4. You can share the software with your friends and family (but dont forget to give me credit 😜).
+ 5. You can also use this for commrcial purpose, but you have to give proper credits to original author.
+
+Terms and condition for reproduction, modification, distribution and any other purpose:
+ 1. You can reproduce the software as long as you have to credit the author.
+ 2. You can not remove the line console.log("Made by Vinayak Handa (github.com/vinayakhanda)") from scripts.js file.
+ 3. You can not delete the comment "Made by Vinayak Handa (github.com/vinayakhanda)" from any source code.

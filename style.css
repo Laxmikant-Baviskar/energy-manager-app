@@ -1,0 +1,52 @@
+body {
+  background-color: #243547;
+}
+table {
+  background-color: #34495e;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 5px;
+  margin-right: 1cm;
+  margin-left: 1cm;
+}
+th,
+td,
+p,
+h1,
+label,
+input {
+  color: #d6cf58;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input {
+  background-color: #243547;
+  border: 2px solid #d6cf58;
+  border-radius: 5px;
+}
+button {
+  color: #d6cf58;
+  background-color: #34495e;
+  border: 2px solid #d6cf58;
+  padding: 10px;
+  width: 3cm;
+  margin-left: 1cm;
+}
+.but {
+  float: left;
+  width: 20%;
+}
+.suggstandrslt {
+  float: left;
+  width: 50%;
+}
+.chart {
+  float: left;
+  width: 50%;
+}
+#scr {
+  size: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #d6cf58;
+  display: none;
+  float: inline-end;
+  width: 70%;
+}

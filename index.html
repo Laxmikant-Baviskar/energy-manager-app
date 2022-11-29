@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energie</title>
+
+    <!-- <script src="showChart.js"></script> -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script src="script.js"></script>
+    <script src="Chart.js"></script>
+  </head>
+  <body>
+    <h1>Energie</h1>
+    <p>
+      Energie helps you to estimate your monthly electricity bill and helps you
+      analyze about what usage you should decrease and helps you to become more
+      Eco-friendly towards mother nature
+    </p>
+    <label for="elcCost">Rate of electricity in your area (per kilowatt)</label>
+    <input type="number" name="" id="elRate" />
+    <br />
+    <br />
+
+    <table cellpadding="5px" class="rwd-table">
+      <tr>
+        <th>Name of appliance</th>
+        <th>No. of appliance BEING USED</th>
+        <th>
+          No. of hours it is used per day (if it is in minutes please
+          <br />write it in decimals eg 30 mins = 0.5 hrs)
+        </th>
+        <th>Total Power used in a one day (output only) (in kilowatt)</th>
+        <th>Total power consumed in Month (output only) (in kilowatt)</th>
+        <th>Money spent</th>
+      </tr>
+      <tr>
+        <td>A/c</td>
+        <td><input type="number" name="" id="ac" /></td>
+        <td><input type="number" name="" id="acHour" /></td>
+        <td id="acday"></td>
+        <td id="acMonth"></td>
+        <td id="acmnSpnt"></td>
+      </tr>
+      <tr>
+        <td>Tv</td>
+        <td><input type="number" name="" id="tv" /></td>
+        <td><input type="number" name="" id="tvHour" /></td>
+        <td id="tvday"></td>
+        <td id="tvMonth"></td>
+        <td id="tvmnSpnt"></td>
+      </tr>
+      <tr>
+        <td>Fridge</td>
+        <td><input type="number" name="" id="fridge" /></td>
+        <td><input type="number" name="" id="fridgeHour" /></td>
+        <td id="fridgeday"></td>
+        <td id="fridgeMonth"></td>
+        <td id="fridgemnSpnt"></td>
+      </tr>
+      <tr>
+        <td>Washing Machine</td>
+        <td><input type="number" name="" id="wm" /></td>
+        <td><input type="number" name="" id="wmHour" /></td>
+        <td id="wmday"></td>
+        <td id="wmMonth"></td>
+        <td id="wmmnSpnt"></td>
+      </tr>
+      <tr>
+        <td>Geyser</td>
+        <td><input type="number" name="" id="geyser" /></td>
+        <td><input type="number" name="" id="geyserHour" /></td>
+        <td id="geyserday"></td>
+        <td id="geyserMonth"></td>
+        <td id="geysermnSpnt"></td>
+      </tr>
+      <tr>
+        <td>Microwave</td>
+        <td><input type="number" name="" id="micro" /></td>
+        <td><input type="number" name="" id="microHour" /></td>
+        <td id="microday"></td>
+        <td id="microMonth"></td>
+        <td id="micromnSpnt"></td>
+      </tr>
+      <tr>
+        <td>Computer</td>
+        <td><input type="number" name="" id="comp" /></td>
+        <td><input type="number" name="" id="compHour" /></td>
+        <td id="compday"></td>
+        <td id="compMonth"></td>
+        <td id="compmnSpnt"></td>
+      </tr>
+      <tr>
+        <td>LED Bulb</td>
+        <td><input type="number" name="" id="blb" /></td>
+        <td><input type="number" name="" id="blbHour" /></td>
+        <td id="blbday"></td>
+        <td id="blbMonth"></td>
+        <td id="blbmnSpnt"></td>
+      </tr>
+      <tr>
+        <td>Fans</td>
+        <td><input type="number" name="" id="fans" /></td>
+        <td><input type="number" name="" id="fansHour" /></td>
+        <td id="fanday"></td>
+        <td id="fanMonth"></td>
+        <td id="fanmnSpnt"></td>
+      </tr>
+      <tr>
+        <td>Induction cooker</td>
+        <td><input type="number" name="" id="ic" /></td>
+        <td><input type="number" name="" id="icHour" /></td>
+        <td id="icday"></td>
+        <td id="icMonth"></td>
+        <td id="icmnSpnt"></td>
+      </tr>
+      <tr>
+        <td>LED TubeLight</td>
+        <td><input type="number" name="" id="tube" /></td>
+        <td><input type="number" name="" id="tubeHour" /></td>
+        <td id="tubeday"></td>
+        <td id="tubeMonth"></td>
+        <td id="tubemnSpnt"></td>
+      </tr>
+    </table>
+    <datalist id="yesorno">
+      <option value="Yes"></option>
+      <option value="No"></option>
+    </datalist>
+    <br />
+    <div class="but">
+      <button onclick="Calculate()" id="btn">Calculate</button>
+    </div>
+    <div id="scr">Scroll down for more results</div>
+    <br />
+    <br />
+    <div class="suggstandrslt">
+      <p id="ttlpwr"></p>
+      <p id="emCost"></p>
+      <p id="sgst"></p>
+    </div>
+
+    <div class="chart">
+      <canvas id="chart" style="width: 50; height: 50px"></canvas>
+    </div>
+  </body>
+</html>

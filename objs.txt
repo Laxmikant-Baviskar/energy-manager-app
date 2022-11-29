@@ -1,0 +1,25 @@
+class appliance{
+    constructor(name,powerConsumption,max,no,time){
+        this.name = name;
+        this.powerConsumption = powerConsumption;
+        this.max = max;
+        this.no = no;
+        this.time = time;
+    }
+}
+
+var Ac = new appliance("Ac",1500,6000);
+Tv = new appliance("Tv",70,350);
+Fridge = new appliance("Fridge",250,500);
+WashingMachine = new appliance("WashingMachine",255,510);
+Geyser = new appliance("Geyser",2000,6000);
+Microwave = new appliance("Microwave",2500,5000);
+computer = new appliance("computer",170,1000);
+blb = new appliance("blb",10,400);
+fan = new appliance("fan",35,300);
+inductioncooker = new appliance("inductioncooker",1900,5700);
+tube = new appliance("tube",15,250);
+
+no of acs = 10 
+one ac in one hour = 1500
+all acs in one hour = no of acs * one ac in one hour
