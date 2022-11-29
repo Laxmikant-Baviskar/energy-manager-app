@@ -36,8 +36,8 @@ const Login = ({ userEmail, setUserEmail }) => {
           if (email) generateError(email);
           else if (password) generateError(password);
         } else {
-          navigate("/energymgr");
-          window.location.href = "/energymgr";
+          // navigate("/energymgr");
+          // window.location.href = "/energymgr";
           toast.success("Login Successful", {
             position: "top-right",
             theme: "dark",

@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Register from "./components/register/register";
 import Login from "./components/login/login";
 import Manager from "./components/manager/manager";
+import ErrorPage from "./components/404/404Page";
 
 const App = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -31,6 +32,7 @@ const App = () => {
           path="/energymgr"
           element={<Manager userEmail={userEmail} />}
         />
+        <Route exact path="/*" element={<ErrorPage />} />
       </Routes>
     </Router>
   );

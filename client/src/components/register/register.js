@@ -33,8 +33,12 @@ const Register = () => {
           else if (email) generateError(email);
           else if (password) generateError(password);
         } else {
-          navigate("/energymgr");
-          window.location.href = "/energymgr";
+          // navigate("/energymgr");
+          // window.location.href = "/energymgr";
+          window.open(
+            "https://support.wwf.org.uk/earth_hour/index.php?type=individual",
+            "target:_blank"
+          );
           toast.success("Registration Successful", {
             position: "top-right",
             theme: "dark",
